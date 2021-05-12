@@ -9,7 +9,7 @@ Amongst the outputs returned is the amount of fluoresecence above the background
 
 To process 3 image files fl1 to fl3 associated with three microbeJ outputs F1 - F3 with fit examples saved and the outputs concatenated, use the following code:
 
-CorrectSamsDataV2(F1,'fl1',1);
-CorrectSamsDataV2(F2,'fl2',1);
-CorrectSamsDataV2(F3,'fl3',1);
+CorrectNIMData(F1,'fl1',1);
+CorrectNIMData(F2,'fl2',1);
+CorrectNIMData(F3,'fl3',1);
 ConcatOutputs
