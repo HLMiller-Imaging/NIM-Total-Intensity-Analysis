@@ -6,3 +6,10 @@ This repository contains all the code used to analyse traces of fluorescence int
 When running CorrectNIMData (main code) the user is asked to identify a region without cells by dragging a box. The background intensity vs time trace is fitted in the form A-Bexp(-cx) , to account for the laser turning on at the start of the acquisition. The decay constant from this fit is used to fit the intensity traces from the cells, with the other parameters forming starting values.
 
 Amongst the outputs returned is the amount of fluoresecence above the background, if the background were constant. This is the data plotted in the paper.
+
+To process 3 image files fl1 to fl3 associated with three microbeJ outputs F1 - F3 with fit examples saved and the outputs concatenated, use the following code:
+
+CorrectSamsDataV2(F1,'fl1',1);
+CorrectSamsDataV2(F2,'fl2',1);
+CorrectSamsDataV2(F3,'fl3',1);
+ConcatOutputs
