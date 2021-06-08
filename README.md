@@ -14,4 +14,4 @@ CorrectNIMData(F2,'fl2',1);
 CorrectNIMData(F3,'fl3',1);
 ConcatOutputs
 
-The code 'FindOneCell' was not used in the final data analysis presented (MicrobeJ processing was repeated to identify only single cells) but it is included here in case it is of use.
+The code 'FindOneCell2' fits a Gaussian to fluorescence intensity per unit volume data. The peak is fixed at the tallest peak in the data.
