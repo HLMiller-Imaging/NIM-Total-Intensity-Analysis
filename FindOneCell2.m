@@ -1,9 +1,9 @@
 function [Peaks, StDev]=FindOneCell2(CellOutputs)
 %FINDONECELL2
-%Plots KDE of cell volumes in a concatenated output file. Finds the primary
-%peak, and fits a Gaussian to it, constrained to have mean at the max value
-%of KDE. Sets a threshold area 1 sigma from the gaussian peak as the limit
-%on single cell size. Returns the threshold.
+%Plots KDE of fluorescence intensity per volumes for cells in a concatenated 
+%output file. Finds the primary peak, and fits a Gaussian to it, constrained
+%to have mean at the max value of KDE. FInds the standard deviation from the 
+% Gaussian fit.
 %
 % INPUTS
 % CellOutputs  - 12 column numeric array of outputs for one condition. e.g.
