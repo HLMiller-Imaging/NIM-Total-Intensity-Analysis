@@ -1,6 +1,6 @@
 function [Peaks, StDev]=FindOneCell2(CellOutputs)
-%FINDONECELL
-%Plots KDE of cell areas in a concatenated output file. Finds the primary
+%FINDONECELL2
+%Plots KDE of cell volumes in a concatenated output file. Finds the primary
 %peak, and fits a Gaussian to it, constrained to have mean at the max value
 %of KDE. Sets a threshold area 1 sigma from the gaussian peak as the limit
 %on single cell size. Returns the threshold.
@@ -44,7 +44,7 @@ opts.StartPoint = [0.005 OneCellPeak 200];
 [fitresult, ~] = fit( xData, yData, ft, opts );
 Peaks(ii)=OneCellPeak;
 StDev(ii)=fitresult.c1./sqrt(2);
-%Threshold=fitresult.b1+fitresult.c1./sqrt(2); %this is 1 sigma limit (95%) with the Matlab Gaussian definition
+%Threshold=fitresult.b1+fitresult.c1./sqrt(2); %this is 1 sigma limit with the Matlab Gaussian definition
 %Xthresh=[Threshold; Threshold];
 %Ythresh=[0; 1.1*peaks1(1)];
 
